@@ -84,7 +84,38 @@ class D {
         } ).join('')
         return dateStr
     }
+
+    // Challenge 4
+    when() {
+        const currentDate = new Date(); // Get the current date and time
+        const diffInSeconds = Math.floor((this._date - currentDate) / 1000)
+    
+        if (diffInSeconds === 0) {
+            return 'today'
+        }
+        const seconds = Math.abs(diffInSeconds);
+        const minutes = Math.floor(seconds / 60);
+        const hours = Math.floor(minutes / 60);
+        const days = Math.floor(hours / 24);
+        const months = Math.floor(days / 30);
+        const years = Math.floor(months / 12);
+    
+        if (years > 0) {
+            return `${years} ${years === 1 ? 'year' : 'years'} ${diffInSeconds > 0 ? 'from now' : 'ago'}`;
+        } else if (months > 0) {
+            return `${months} ${months === 1 ? 'month' : 'months'} ${diffInSeconds > 0 ? 'from now' : 'ago'}`;
+        } else if (days > 0) {
+            return `${days} ${days === 1 ? 'day' : 'days'} ${diffInSeconds > 0 ? 'from now' : 'ago'}`;
+        } else if (hours > 0) {
+            return `${hours} ${hours === 1 ? 'hour' : 'hours'} ${diffInSeconds > 0 ? 'from now' : 'ago'}`;
+        } else if (minutes > 0) {
+            return `${minutes} ${minutes === 1 ? 'minute' : 'minutes'} ${diffInSeconds > 0 ? 'from now' : 'ago'}`;
+        } else {
+            return `${seconds} ${seconds === 1 ? 'second' : 'seconds'} ${diffInSeconds > 0 ? 'from now' : 'ago'}`;
+        }
+    } 
 }
+
 // The date Object can be initialized in different ways:
 
 // With no parameters: 
@@ -118,7 +149,15 @@ console.log(e.format('y/m/D'))       // 17/Jan/2
 console.log(e.format('H:I:S'))       // 03:04:05
 console.log(e.format('h:i:s'))       // 3:4:5
 console.log(e.format('Y-M-D h:I:S'))
-// const yesterday = new D(2023, 7, 29, 3, 4, 5)
-// const today = new D(2023, 7, 30, 3, 4, 5)
-// console.log(yesterday._date - today._date)
-// console.log(yesterday._date.getSeconds() - today._date.getSeconds())
+
+// challenge 4
+const f = new D(2023, 1, 2, 3, 4, 5)
+console.log(f.when()) // 6 months ago
+const g = new D(2023, 10, 30, 3, 4, 5)
+console.log(g.when()) // 3 months from now
+const h = new D(2028, 10, 2, 3, 4, 5)
+console.log(h.when()) // 5 years from now
+const i = new D(2023, 7, 30, 14, 4, 5)
+console.log(i.when()) // 3 days from now
+const j = new D()
+console.log(j.when()) // today
