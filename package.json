@@ -1,12 +1,13 @@
 {
-  "name": "date-lib-npm",
+  "name": "dates-in-js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": ["date in javascript",
+"dates", "dates modification", "dates library", "date"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
