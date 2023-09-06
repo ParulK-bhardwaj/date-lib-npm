@@ -45,7 +45,7 @@ dates-in-js offers a wide range of features that empower you to work with dates 
 ## Usage
 
 ```javascript
-const D = require('betterdate');
+const D = require('dates-in-js');
 
 // Creating a datejs instance
 const currentDate = new D();
