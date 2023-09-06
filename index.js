@@ -177,6 +177,8 @@
         } 
     }
 
+    module.exports = D;
+
     // Example usage:
     // The date Object can be initialized in different ways:
 
@@ -206,8 +208,8 @@
     // Challenge 3
 
     const e = new D(2023, 0, 2, 3, 4, 5)
-    console.log(e.format())              // 2017 January 02
-    console.log(e.format('y/m/D'))       // 17/Jan/2
+    console.log(e.format())              // 2023 January 02
+    console.log(e.format('y/m/D'))       // 23/Jan/2
     console.log(e.format('H:I:S'))       // 03:04:05
     console.log(e.format('h:i:s'))       // 3:4:5
     console.log(e.format('Y-M-D h:I:S'))
