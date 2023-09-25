@@ -71,7 +71,7 @@ describe('D class', () => {
   // when() method
 
   describe('when', () => {
-    const futureDate = new D(2025, 8, 5, 3, 4, 5);
+    const futureDate = new D(2025, 9, 5, 3, 4, 5);
     const pastDate = new D(2022, 1, 5, 3, 4, 5);
 
     test('should handle future dates correctly', () => {
