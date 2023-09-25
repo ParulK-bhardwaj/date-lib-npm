@@ -1,4 +1,4 @@
-[![npm version](https://img.shields.io/npm/v/.svg)](https://www.npmjs.com/package/dates-in-js)
+[![npm version](https://img.shields.io/npm/v/dates-in-js.svg)](https://www.npmjs.com/package/dates-in-js)
 
 [![npm downloads](https://img.shields.io/npm/dt/dates-in-js.svg)](https://www.npmjs.com/package/dates-in-js)
 
